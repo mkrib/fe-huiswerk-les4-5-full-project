@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Roboto:wght@100;300;400&display=swap');
 
 /*////////////////////////
     Table of Contents
@@ -10,24 +10,167 @@
     4. Areas
         4.1 Header
         4.2 Introduction
-        etc.
+        4.3 Cases
     5. Media Queries
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.dev {
+    border: 2px solid orange;
+}
+
+:root {
+    --paars: #5722CD;
+    --blauw :#4845E4;
+    --roze: #ED4385;
+    --zwart: #0C0C0C;
+    --lichtpaars: #F2F0FF;
+/*(voor de grote zwevende woorden, zoals "hello" en "services")*/
+    --lichtgrijs: #F3F6F9;
+/*(voor de achtergrond van de projecten)*/
+    --grijs: #7A7A7A;
+/*(voor de service-tegel tekst)*/
+}
 
 /* ------------------------------- 2. Typography ----------------------------------- */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px dashed red;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 1200px;
+    margin: 0 20px;
+    border: 2px dashed blue;
+}
+
+button {
+    background-color: var(--roze);
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    border-radius: 30px;
+    padding: 18px 36px;
+    border: none;
+    box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.24);
+}
+
+a, a:visited {
+    text-decoration: none;
+}
 
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
+header {
+    color: #FFF;
+    background: rgb(72,69,228);
+    background: linear-gradient(90deg, rgba(72,69,228,1) 31%, rgba(87,34,205,1) 100%);
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 10px;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-basis: 400px;
+    justify-content: space-between;
+    list-style: none;
+}
+
+nav ul li a, nav ul li a:visited {
+    color: #FFF;
+    font-weight: 300;
+}
+
+.header-center-content-wrapper {
+    text-align: center;
+    padding: 50px 0;
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.header-center-content-wrapper h1 {
+    margin: 20px 0;
+    font-size: 36px;
+}
+
+.header-center-content-wrapper p {
+    font-weight: 300;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/*.header-section {*/
+/*    position: relative;*/
+/*}*/
+
+/*.header-icon {*/
+/*    position: absolute;*/
+/*    bottom: 0;*/
+/*    left: 50%;*/
+/*}*/
+
+.header-icon img {
+    height: 80px;
+    width: 60px;
+}
 
 /* --------------- 4.2 Introduction ------------------- */
+.section-introduction {
+    text-align: center;
+    padding: 70px 0 50px 0;
+    line-height: 1.5;
+    max-width: 700px;
+}
+
+.section-introduction h2 {
+    color: var(--paars);
+    font-size: 26px;
+    padding-bottom: 60px;
+}
+
+.section-introduction p {
+    padding-bottom: 20px;
+}
+
+.section-introduction p a {
+    color: var(--paars);
+}
+
+/* --------------- 4.3 Cases ------------------- */
+
+.section-cases {
+    display: flex;
+    flex-direction: column;
+}
+
 
 /* ------------------------------- 5. Media Queries -------------------------------- */

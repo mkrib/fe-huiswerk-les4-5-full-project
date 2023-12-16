@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Roboto:wght@100;300;400;500&display=swap');
 
 /*////////////////////////
     Table of Contents
@@ -11,6 +11,9 @@
         4.1 Header
         4.2 Introduction
         4.3 Cases
+        4.4 Services
+        4.5 Contact
+        4.6 Footer
     5. Media Queries
 ////////////////////////*/
 
@@ -18,6 +21,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 .dev {
@@ -53,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: 2px dashed red;
+    width: 100%;
 }
 
 .inner-container {
@@ -62,7 +66,6 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     flex-basis: 1200px;
     margin: 0 20px;
-    border: 2px dashed blue;
 }
 
 button {
@@ -78,6 +81,7 @@ button {
 
 a, a:visited {
     text-decoration: none;
+    color: var(--paars);
 }
 
 /* --------------- 3.2 Other --------------------------- */
@@ -128,15 +132,11 @@ nav ul li a, nav ul li a:visited {
     margin-bottom: 20px;
 }
 
-/*.header-section {*/
-/*    position: relative;*/
-/*}*/
-
-/*.header-icon {*/
-/*    position: absolute;*/
-/*    bottom: 0;*/
-/*    left: 50%;*/
-/*}*/
+.header-icon {
+    margin: 50px 0 0 0;
+    height: 60px;
+    width: 60px;
+}
 
 .header-icon img {
     height: 80px;
@@ -161,16 +161,256 @@ nav ul li a, nav ul li a:visited {
     padding-bottom: 20px;
 }
 
-.section-introduction p a {
-    color: var(--paars);
-}
-
 /* --------------- 4.3 Cases ------------------- */
 
 .section-cases {
     display: flex;
     flex-direction: column;
+    background-color: var(--lichtgrijs);
 }
 
+.section-cases article {
+    display: flex;
+    margin: 60px 40px 20px 40px;
+    max-width: 1200px;
+}
+
+.case-variety-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.cases-img {
+    width: 100%;
+    box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.24);
+}
+
+.cases-img-wrapper {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    display: flex;
+    align-items: center;
+}
+
+.cases-text-wrapper {
+    flex-basis: 600px;
+    padding: 50px 100px 50px 20px;
+}
+
+.cases-text-wrapper-variety {
+    padding-left: 80px;
+}
+
+.cases-icon-line {
+    width: 40px;
+    height: 8px;
+    margin: 20px 0 20px 4px;
+}
+
+.cases-link {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 10px;
+    font-weight: 500;
+    padding-top: 40px;
+}
+
+.cases-article-worth {
+    padding-bottom: 100px;
+}
+
+/* --------------- 4.4 Services ------------------- */
+.section-services {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px 0;
+}
+
+.section-services article {
+    flex-basis: 280px;
+    height: 280px;
+}
+
+.icon-services {
+    height: 50px;
+    width: 50px;
+}
+
+.services-article {
+    border: 1px solid var(--paars);
+    padding: 30px;
+    box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.14);
+}
+
+.services-h {
+    color: var(--paars);
+    margin-bottom: 20px;
+}
+
+.services-p {
+    color: var(--grijs);
+    font-size: 12px;
+}
+
+/* --------------- 4.5 Contact ------------------- */
+.section-contact {
+    background: rgb(72,69,228);
+    background: linear-gradient(90deg, rgba(72,69,228,1) 31%, rgba(87,34,205,1) 100%);
+}
+
+.section-contact h2 {
+    font-size: 32px;
+}
+
+.section-contact p {
+    padding: 24px 0;
+    font-weight: 300;
+}
+
+.div-contact {
+    flex-basis: 700px;
+    text-align: center;
+    color: #FFF;
+    padding: 70px 10px 50px 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form label {
+    font-size: 14px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 14px 0 14px 10px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: none;
+}
+
+form textarea {
+    min-height: 150px;
+}
+
+form ::placeholder {
+    font-family: 'Roboto', sans-serif;
+    color: var(--grijs);
+}
+
+.btn-contact {
+    width: 100%;
+}
+
+.btn-contact button {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+/* --------------- 4.6 Footer ------------------- */
+
+footer {
+    color: #FFF;
+    background-color: var(--zwart);
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 12px;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 576px) {
+    /* Header */
+    nav {
+        justify-content: center;
+    }
+
+    /* Cases */
+    .section-cases article {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0;
+        max-width: 1200px;
+    }
+
+    .section-cases article p {
+        font-size: 20px;
+    }
+
+    .section-cases h2 {
+        font-size: 36px;
+    }
+
+    .cases-img {
+        width: 100%;
+        box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    .cases-img-wrapper {
+        flex-basis: 400px;
+        margin-top: 50px;
+        flex-grow: 0;
+        flex-shrink: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .cases-text-wrapper {
+        flex-basis: 200px;
+        padding: 50px 0 0 10px;
+    }
+
+    .cases-text-wrapper-variety {
+        padding-left: 10px;
+    }
+
+    .cases-article-worth {
+        padding-bottom: 100px;
+    }
+
+/*    Services */
+    .section-services article {
+        flex-basis: 400px;
+        height: 400px;
+    }
+
+    .icon-services {
+        height: 80px;
+        width: 80px;
+    }
+
+    .services-h {
+        font-size: 24px;
+    }
+
+    .services-p {
+        font-size: 18px;
+    }
+
+/*    Contact */
+    .section-contact h2 {
+        font-size: 38px;
+    }
+
+    .section-contact p {
+        font-size: 16px;
+    }
+
+
+/*    Footer */
+    footer p {
+        font-size: 16px;
+        padding: 20px 0;
+    }
+
+}

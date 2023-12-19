@@ -24,21 +24,14 @@
     padding: 0;
 }
 
-.dev {
-    border: 2px solid orange;
-}
-
 :root {
     --paars: #5722CD;
     --blauw :#4845E4;
     --roze: #ED4385;
     --zwart: #0C0C0C;
     --lichtpaars: #F2F0FF;
-/*(voor de grote zwevende woorden, zoals "hello" en "services")*/
     --lichtgrijs: #F3F6F9;
-/*(voor de achtergrond van de projecten)*/
     --grijs: #7A7A7A;
-/*(voor de service-tegel tekst)*/
 }
 
 /* ------------------------------- 2. Typography ----------------------------------- */
@@ -94,6 +87,16 @@ header {
     background: rgb(72,69,228);
     background: linear-gradient(90deg, rgba(72,69,228,1) 31%, rgba(87,34,205,1) 100%);
 }
+
+/*Bonus vraag: Hoe kan ik deze driehoek ook een gradient achtergrond geven?*/
+
+/*.schuine-achtergrond-test {*/
+/*    width: 100%;*/
+/*    height: 0;*/
+/*    border-right: 1400px solid #5722CD;*/
+/*    border-left: 50px solid transparent;*/
+/*    border-bottom: 50px solid transparent;*/
+/*}*/
 
 nav {
     display: flex;
